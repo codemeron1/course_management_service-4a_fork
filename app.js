@@ -284,5 +284,6 @@ app.delete("/available-courses/:id", async (req, res) => {
 });
 
 // -------------------- START SERVER --------------------
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const PORT = process.env.PORT || 3000;
+const HOST = "0.0.0.0";
+app.listen(PORT, HOST, () => console.log(`Server running on ${HOST}:${PORT}`));
